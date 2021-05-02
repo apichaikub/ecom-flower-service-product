@@ -14,5 +14,7 @@
 */
 
 $router->get('/', function () use ($router) {
-    return "Product Service...";
+    return "Product Service";
 });
+$router->get('/products', 'ProductController@index');
+$router->get('/products/{id}', 'ProductController@show');
